@@ -1,12 +1,22 @@
-# React + Vite
+## 🛠️ VSCode 설정 (권장)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이 프로젝트는 Vite + ESLint(Flat Config) + Prettier 기반으로 구성되어 있습니다.  
+아래와 같이 VSCode에 설정하면 저장 시 자동으로 포맷 및 린트 고침이 작동합니다.
 
-Currently, two official plugins are available:
+<details>
+<summary>💡 <code>.vscode/settings.json</code> 예시</summary>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```json
+{
+  "editor.formatOnSave": true,
+  "eslint.useFlatConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  }
+}
+```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</detail>
+ℹ️ 위 설정은 Prettier와 ESLint 확장 설치가 필요합니다.
