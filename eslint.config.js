@@ -66,6 +66,7 @@ export default [
       'no-useless-return': 'warn', // 쓸모없는 return 제거
       'no-empty-function': ['warn', { allow: ['arrowFunctions'] }], // 비어있는 함수는 경고
       'no-alert': 'warn', // alert 사용 금지
+      'no-undef': 'error', // 정의되지 않은 변수/속성 에러
 
       // import 순서를 그룹별로 검사 (알파벳 순 아님, 검사만)
       'import/order': [
