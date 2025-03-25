@@ -43,6 +43,7 @@ export default [
       ],
       'react/jsx-key': 'warn', // map 같은 거 돌릴 때 key 누락 경고
       'react/no-array-index-key': 'warn', // index를 key로 쓰면 경고
+      'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }], // jsx 확장자가 아닌 file에서 JSX 문법을 사용할 경우 경고
 
       // mport 정렬 (알파벳 순)
       'simple-import-sort/imports': 'error',
@@ -80,6 +81,17 @@ export default [
           'newlines-between': 'always',
         },
       ],
+
+      // import 할 때 확장자를 붙이면 에러
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          js: 'never',
+          jsx: 'never',
+        },
+      ],
+
       'import/no-unresolved': 'error', // 존재하지 않는 모듈 import 시 에러
       'import/no-duplicates': 'error', // 같은 모듈을 중복 import하면 에러
       'import/newline-after-import': 'warn', // import 문 다음에 빈 줄이 없으면 경고
@@ -88,8 +100,9 @@ export default [
       'prefer-template': 'warn', // 문자열 연결 시 템플릿 리터럴 사용 유도
 
       'arrow-body-style': ['warn', 'as-needed'], // 화살표 함수에서 한 줄 반환일 경우 중괄호 생략
-      yoda: ['error', 'never'], // yoda 조건문 금지 ex) if (5 === x) <- 이런식으로 쓰는 거 금지. 리터럴은 항상 오른쪽에.
+      'jsx-a11y/anchor-is-valid': 'warn', // a태그 올바르게 사용하는지 체크
 
+      yoda: ['error', 'never'], // yoda 조건문 금지 ex) if (5 === x) <- 이런식으로 쓰는 거 금지. 리터럴은 항상 오른쪽에.
       eqeqeq: ['error', 'always'], // 항상 '===' 사용
       curly: ['error', 'all'], // 블록문 중괄호 강제
     },
