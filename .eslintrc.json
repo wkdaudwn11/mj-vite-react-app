@@ -5,6 +5,7 @@
     "es2020": true
   },
   "parserOptions": {
+    "project": "./jsconfig.json",
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
@@ -96,7 +97,11 @@
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx"]
-      }
+      },
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".js", ".jsx"]
+      } // alias path 세팅
     },
     "react": {
       "version": "detect"
