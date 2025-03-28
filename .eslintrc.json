@@ -5,7 +5,7 @@
     "es2020": true
   },
   "parserOptions": {
-    "project": "./jsconfig.json",
+    "project": "./jsconfig.json", // path alias를 사용하는 경우 eslint가 설정된 alias를 이해할 수 있게 jsconfig.json 파일을 지정해주는 게 좋음
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
@@ -31,17 +31,29 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    // React 관련
-    "react/jsx-key": "warn", // JSX에서 반복 렌더링 시 key 누락 경고
-    "react/no-array-index-key": "warn", // map에서 index를 key로 쓰는 것 경고
-    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".js"] }], // JSX를 사용할 수 있는 확장자
+    // React, jsx 관련
+    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".js"] }], // jsx, js 확장자가 아닌 파일에서 jsx 문법쓰면 경고
     "react/react-in-jsx-scope": "off", // react는 이제 필수로 import 할 필요 없음.
+    "react/self-closing-comp": "warn", // self-closing 권장
+    "react/jsx-boolean-value": ["warn", "never"], // props 전달시 true일 경우엔 생략 가능
+    "react/prop-types": "off", // prop-types 사용x (JSDoc 사용)
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      { "props": "never", "children": "never" }
+    ], // 불필요한 { } 제거
 
     // React Fast Refresh
     "react-refresh/only-export-components": [
       "warn",
       { "allowConstantExport": true }
-    ], // HMR 안정성 확보
+    ], // 조건문 안에서 export 하거나, export를 동적으로 하면 HMR(Hot Module Replacement)이 깨질 수 있다는 경고
+
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": ["css"]
+      }
+    ], // emotion의 css prop은 예외 처리
 
     // import 정렬 (자동 정렬)
     "simple-import-sort/imports": "error", // import 정렬 자동화
@@ -56,39 +68,44 @@
           "internal",
           ["parent", "sibling", "index"]
         ],
-        "newlines-between": "always"
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
       }
-    ], // import 그룹별 순서 검사 (자동 정렬은 아님)
+    ], // import 순서 검사
+
     "import/extensions": [
       "error",
       "ignorePackages",
       { "js": "never", "jsx": "never" }
-    ], // import 시 확장자 생략 필수
-    "import/no-unresolved": "error", // 존재하지 않는 모듈 import 에러
-    "import/no-duplicates": "error", // 동일 모듈 중복 import 금지
+    ], // js, jsx 파일을 import 할 때 확장자 넣으면 에러.
+
     "import/newline-after-import": "warn", // import 다음 빈 줄 없으면 경고
 
     // 변수 및 사용 관련
-    "no-unused-vars": ["error"], // 사용되지 않는 변수 금지
-    "no-undef": "error", // 정의되지 않은 변수 사용 금지
+    "no-unused-vars": ["error"], // 사용되지 않는 변수가 있으면 에러
+    "no-undef": "error", // 정의되지 않은 변수를 사용하면 에러
 
     // 코드 스타일 개선
     "arrow-body-style": ["warn", "as-needed"], // 화살표 함수가 한 줄이면 중괄호 생략 유도
-    "prefer-const": "warn", // 다시 할당하지 않는 변수는 const 권장
-    "prefer-template": "warn", // 문자열 연결 대신 템플릿 리터럴 사용 권장
+    "prefer-const": "warn", // let으로 변수 선언 했을 경우, 다시 할당하지 않는다면 경고 (const 유도)
+    "prefer-template": "warn", // 문자열 연결 대신 템플릿 리터럴 사용 권장 (``)
     "no-var": "error", // var 사용 금지
-    "no-multi-spaces": "warn", // 들쭉날쭉한 여러 공백 금지
-    "no-useless-return": "warn", // 불필요한 return 제거
+    "no-multi-spaces": "warn", // 들쭉날쭉한 여러 공백 경고
+    "no-useless-return": "warn", // 불필요한 return 경고
     "no-empty-function": ["warn", { "allow": ["arrowFunctions"] }], // 내용 없는 함수 경고
     "no-duplicate-imports": "error", // 동일 모듈 중복 import 금지
     "no-console": ["warn", { "allow": ["warn", "error"] }], // console.log 사용 경고 (warn, error는 허용)
     "no-alert": "warn", // alert, confirm, prompt 사용 경고
     "no-else-return": "warn", // if 블록에서 return 하면 else 생략 유도
+    "object-shorthand": ["warn", "always"], // { a: a } → { a } 권장
+    "no-useless-concat": "warn", // "Hello " + "World" 같은 불필요한 concat 방지
 
     // 코드 품질
     "yoda": ["error", "never"], // 조건문에서 리터럴을 좌측에 두는 Yoda 스타일 금지
     "eqeqeq": ["error", "always"], // 항상 ===, !== 사용
-    "curly": ["error", "all"], // if, else 등 블록문에 중괄호 강제
 
     // 접근성 관련 (JSX 내 링크 등)
     "jsx-a11y/anchor-is-valid": "warn" // 잘못된 a 태그 사용 경고
