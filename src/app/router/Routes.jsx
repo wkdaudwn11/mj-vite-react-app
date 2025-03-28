@@ -1,6 +1,7 @@
 import BackoutClListPage from '@/pages/backoutClList';
 import DefectChartPage from '@/pages/defectChart';
 import LoginPage from '@/pages/login';
+import NotFoundPage from '@/pages/notFoundPage';
 import Layout from '@/widgets/layout';
 
 const routes = [
@@ -21,6 +22,7 @@ const routes = [
     path: '/login',
     element: <LoginPage />,
   },
+  { path: '*', element: <NotFoundPage /> },
 ];
 
 export default routes;
