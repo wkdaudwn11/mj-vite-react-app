@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { Providers } from '@/app/provider';
+import Providers from '@/app/provider';
 
 import App from './App';
 
