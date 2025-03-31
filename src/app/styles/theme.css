@@ -1,0 +1,6 @@
+@theme {
+  --color-coral: oklch(0.74 0.17 40.24);
+  --color-lagoon: oklch(0.72 0.11 221.19);
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.25rem;
+}

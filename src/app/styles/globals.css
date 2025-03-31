@@ -1,9 +1,7 @@
 @import 'tailwindcss';
-@import 'tailwindcss/preflight';
 
 @import './fonts.css';
-
-@layer theme, base, components, utilities;
+@import './theme.css';
 
 @theme {
   --default-font-family:
