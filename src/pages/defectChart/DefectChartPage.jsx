@@ -1,20 +1,15 @@
-import { css } from '@emotion/react';
-
 import { useCountStore } from '@/shared/store';
-import { theme } from '@/shared/theme';
-
-const textStyle = css`
-  font-size: ${theme.fontSize.lg};
-  color: ${theme.colors.red};
-`;
 
 const DefectChartPage = () => {
   const { count, setIncrease, setDecrease, reset } = useCountStore();
 
   return (
-    <div>
+    <div className='bg-gray-400'>
       <h1>DefectChartPage</h1>
-      <p css={textStyle}>{count}</p>
+      <h1 className='text-3xl font-bold text-blue-500 underline'>
+        Hello world!
+      </h1>
+      <p>{count}</p>
       <button type='button' onClick={setIncrease}>
         +
       </button>

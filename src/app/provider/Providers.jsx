@@ -1,5 +1,3 @@
-import ThemeProvider from './ThemeProvider';
-
-const Providers = ({ children }) => <ThemeProvider>{children}</ThemeProvider>;
+const Providers = ({ children }) => <>{children}</>;
 
 export default Providers;

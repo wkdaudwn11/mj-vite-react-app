@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+
+@import './fonts.css';
+
+@layer theme, base, components, utilities;
+
+@theme {
+  --default-font-family:
+    'Pretendard', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+    '"Helvetica Neue"', 'Arial', 'sans-serif';
+}

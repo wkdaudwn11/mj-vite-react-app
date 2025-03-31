@@ -48,12 +48,7 @@
       { "allowConstantExport": true }
     ], // 조건문 안에서 export 하거나, export를 동적으로 하면 HMR(Hot Module Replacement)이 깨질 수 있다는 경고
 
-    "react/no-unknown-property": [
-      "error",
-      {
-        "ignore": ["css"]
-      }
-    ], // emotion의 css prop은 예외 처리
+    "react/no-unknown-property": ["error"],
 
     // import 정렬 (자동 정렬)
     "simple-import-sort/imports": "error", // import 정렬 자동화
