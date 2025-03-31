@@ -1,7 +1,6 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 
-import GlobalStyle from '../theme/GlobalStyle';
-import { theme } from '../theme/theme';
+import { GlobalStyle, theme } from '@/shared/theme';
 
 const ThemeProvider = ({ children }) => (
   <EmotionThemeProvider theme={theme}>

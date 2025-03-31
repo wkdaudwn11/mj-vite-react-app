@@ -1,9 +1,11 @@
 import { css } from '@emotion/react';
 
 import { useCountStore } from '@/shared/store';
+import { theme } from '@/shared/theme';
 
-const textStyle = theme => css`
+const textStyle = css`
   font-size: ${theme.fontSize.lg};
+  color: ${theme.colors.red};
 `;
 
 const DefectChartPage = () => {
