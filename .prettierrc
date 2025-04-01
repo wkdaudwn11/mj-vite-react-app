@@ -8,5 +8,7 @@
   "arrowParens": "avoid",
   "jsxSingleQuote": true,
   "endOfLine": "lf",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./src/app/styles/globals.css",
+  "tailwindConfig": "./tailwind.config.js"
 }

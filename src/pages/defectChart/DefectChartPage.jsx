@@ -1,5 +1,4 @@
 import { useCountStore } from '@/shared/store';
-import { theme } from '@/shared/styles';
 
 const DefectChartPage = () => {
   const { count, setIncrease, setDecrease, reset } = useCountStore();
@@ -7,8 +6,6 @@ const DefectChartPage = () => {
   return (
     <div className='flex flex-col gap-2 px-4'>
       <h1>DefectChartPage</h1>
-      <p className='text-coral'>coral: {theme.colors.coral}</p>
-      <p className='text-lagoon'>title: {theme.fontSize.title}</p>
       <p className='text-3xl font-bold text-blue-500 underline'>{count}</p>
       <div className='flex gap-4'>
         <button
