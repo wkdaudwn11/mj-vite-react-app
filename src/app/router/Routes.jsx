@@ -1,5 +1,4 @@
-import BackoutClListPage from '@/pages/backoutClList';
-import DefectChartPage from '@/pages/defectChart';
+import HomePage from '@/pages/home';
 import LoginPage from '@/pages/login';
 import NotFoundPage from '@/pages/notFoundPage';
 import Layout from '@/widgets/layout';
@@ -10,11 +9,7 @@ const routes = [
     children: [
       {
         path: '/',
-        element: <DefectChartPage />,
-      },
-      {
-        path: '/backout-cl-list',
-        element: <BackoutClListPage />,
+        element: <HomePage />,
       },
     ],
   },
