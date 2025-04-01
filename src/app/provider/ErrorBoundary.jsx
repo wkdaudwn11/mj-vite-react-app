@@ -1,7 +1,10 @@
-// src/shared/ErrorBoundary.jsx
 import { Component } from 'react';
 
-import Fallback from './Fallback';
+const Fallback = () => (
+  <div>
+    <p>Something went wrong.</p>
+  </div>
+);
 
 class ErrorBoundary extends Component {
   constructor(props) {
