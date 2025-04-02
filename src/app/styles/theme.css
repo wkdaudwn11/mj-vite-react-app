@@ -1,7 +1,0 @@
-:root {
-  --custom-primary: #261fb3;
-}
-
-@theme {
-  --color-custom-primary: var(--custom-primary);
-}

@@ -84,16 +84,7 @@
         "extensions": [".js", ".jsx"]
       },
       "alias": {
-        "map": [
-          ["@", "./src"],
-          ["@api", "./src/shared/api"],
-          ["@model", "./src/shared/model"],
-          ["@lib", "./src/shared/lib"],
-          ["@assets", "./src/shared/assets"],
-          ["@store", "./src/shared/store"],
-          ["@hooks", "./src/shared/hooks"],
-          ["@ui", "./src/shared/ui"]
-        ],
+        "map": [["@", "./src"]],
         "extensions": [".js", ".jsx"]
       } // alias path 세팅
     },

@@ -1,3 +1,1 @@
-import useCountStore from './useCountStore';
-
-export { useCountStore };
+export { default as useCountStore } from './useCountStore';

@@ -1,9 +1,10 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@import './fonts.css';
+@config "../../../tailwind.config.js";
+
 @import './shadcn.css';
-@import './theme.css';
+@import './fonts.css';
 
 :root {
   --default-font-family:

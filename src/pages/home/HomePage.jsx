@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 
-import { useCountStore } from '@store';
+import { useCountStore } from '@/shared/store';
 import {
   Button,
   DropdownMenu,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@ui';
+} from '@/shared/ui';
 
 const people = [
   { id: 1, name: '홍길동', email: 'hong@example.com' },
@@ -51,8 +51,15 @@ const HomePage = () => {
       </div>
 
       <div className='flex flex-col gap-1'>
-        <h2 className='text-xl font-bold'>2. tailwindcss custom color</h2>
-        <span className='font-semibold text-custom-primary'>text-custom-primary</span>
+        <h2 className='text-xl font-bold'>2. tailwindcss design system</h2>
+        <span className='font-semibold text-blue-100'>blue-100</span>
+        <span className='font-semibold text-blue-200'>blue-200</span>
+        <span className='font-semibold text-green-100'>green-100</span>
+        <span className='font-semibold text-green-200'>green-200</span>
+        <span className='text-heading-800-40'>heading-800-40</span>
+        <span className='text-body-600-24'>body-600-24</span>
+        <span className='text-body-400-20'>body-400-20</span>
+        <span className='text-caption-600-12'>caption-600-12</span>
       </div>
 
       <div className='flex w-96 flex-col items-start gap-2'>
