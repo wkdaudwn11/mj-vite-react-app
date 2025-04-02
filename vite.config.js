@@ -13,6 +13,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      '@api': path.resolve(__dirname, 'src/shared/api'),
+      '@model': path.resolve(__dirname, 'src/shared/model'),
+      '@lib': path.resolve(__dirname, 'src/shared/lib'),
+      '@assets': path.resolve(__dirname, 'src/shared/assets'),
+      '@store': path.resolve(__dirname, 'src/shared/store'),
+      '@hooks': path.resolve(__dirname, 'src/shared/hooks'),
+      '@ui': path.resolve(__dirname, 'src/shared/ui'),
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
 });

@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 
-import { useCountStore } from '@/shared/store';
+import { useCountStore } from '@store';
 import {
   Button,
   DropdownMenu,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/shared/ui';
+} from '@ui';
 
 const people = [
   { id: 1, name: '홍길동', email: 'hong@example.com' },
