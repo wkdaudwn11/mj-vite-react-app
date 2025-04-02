@@ -1,6 +1,5 @@
 import { ChevronDown } from 'lucide-react';
 
-import { cn } from '@/shared/lib';
 import { useCountStore } from '@/shared/store';
 import {
   Button,
@@ -28,29 +27,30 @@ const HomePage = () => {
   const { count, setIncrease, setDecrease, reset } = useCountStore();
 
   return (
-    <div className={cn('flex flex-col gap-10 p-4')}>
-      <h1>HomePage</h1>
-      <p className={cn('text-3xl font-bold text-blue-500 underline')}>
-        {count}
-      </p>
-      <div className={cn('flex gap-4')}>
+    <div className='flex flex-col gap-10 p-4'>
+      <h1 className='text-5xl'>HomePage</h1>
+      <span className='text-xl font-bold text-custom-primary'>
+        text-custom-primary
+      </span>
+      <p className='text-3xl font-bold text-blue-500 underline'>{count}</p>
+      <div className='flex gap-4'>
         <button
           type='button'
-          className={cn('cursor-pointer bg-gray-300 px-2 py-1')}
+          className='cursor-pointer bg-gray-300 px-2 py-1'
           onClick={setIncrease}
         >
           +
         </button>
         <button
           type='button'
-          className={cn('cursor-pointer bg-gray-400 px-2 py-1')}
+          className='cursor-pointer bg-gray-400 px-2 py-1'
           onClick={setDecrease}
         >
           -
         </button>
         <button
           type='button'
-          className={cn('cursor-pointer bg-gray-500 px-2 py-1 text-gray-50')}
+          className='cursor-pointer bg-gray-500 px-2 py-1 text-gray-50'
           onClick={reset}
         >
           reset
@@ -74,7 +74,7 @@ const HomePage = () => {
 
       <div className='mx-auto w-full rounded-md border p-4'>
         <div className='flex items-center py-4'>
-          <Input placeholder='Filter emails...' value='' className='max-w-sm' />
+          <Input placeholder='Filter emails...' className='max-w-sm' />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant='outline' className='ml-auto'>
