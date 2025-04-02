@@ -13,13 +13,7 @@ import { buttonVariants } from './button.styles';
  * @param {boolean} [props.asChild]
  * @param {React.ButtonHTMLAttributes<HTMLButtonElement> | React.ComponentPropsWithoutRef<typeof Slot>} [props.rest]
  */
-export const Button = ({
-  className,
-  variant,
-  size,
-  asChild = false,
-  ...props
-}) => {
+export const Button = ({ className, variant, size, asChild = false, ...props }) => {
   const Comp = asChild ? Slot : 'button';
 
   return (

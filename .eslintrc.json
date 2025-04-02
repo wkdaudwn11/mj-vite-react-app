@@ -29,27 +29,16 @@
     "react/jsx-boolean-value": ["warn", "never"], // props 전달시 true일 경우엔 생략 가능
     "react/prop-types": "off", // prop-types 사용x (JSDoc 사용)
     "react/no-unknown-property": ["error"],
-    "react/jsx-curly-brace-presence": [
-      "warn",
-      { "props": "never", "children": "never" }
-    ], // 불필요한 { } 제거
+    "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "never" }], // 불필요한 { } 제거
 
     // React Fast Refresh
-    "react-refresh/only-export-components": [
-      "warn",
-      { "allowConstantExport": true }
-    ], // 조건문 안에서 export 하거나, export를 동적으로 하면 HMR(Hot Module Replacement)이 깨질 수 있다는 경고
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }], // 조건문 안에서 export 하거나, export를 동적으로 하면 HMR(Hot Module Replacement)이 깨질 수 있다는 경고
 
     // import 관련 룰
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "sibling", "index"]
-        ],
+        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
         "pathGroupsExcludedImportTypes": ["builtin"],
         "newlines-between": "always",
         "alphabetize": {
@@ -59,11 +48,7 @@
       }
     ], // import 순서 검사
 
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      { "js": "never", "jsx": "never" }
-    ], // js, jsx 파일을 import 할 때 확장자 넣으면 에러.
+    "import/extensions": ["error", "ignorePackages", { "js": "never", "jsx": "never" }], // js, jsx 파일을 import 할 때 확장자 넣으면 에러.
 
     "import/newline-after-import": "warn", // import 다음 빈 줄 없으면 경고
 

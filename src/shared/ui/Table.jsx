@@ -9,11 +9,7 @@ import { cn } from '@/shared/lib';
  */
 const Table = ({ className, ...rest }) => (
   <div data-slot='table-container' className='relative w-full overflow-x-auto'>
-    <table
-      data-slot='table'
-      className={cn('w-full caption-bottom text-sm', className)}
-      {...rest}
-    />
+    <table data-slot='table' className={cn('w-full caption-bottom text-sm', className)} {...rest} />
   </div>
 );
 
@@ -23,11 +19,7 @@ const Table = ({ className, ...rest }) => (
  * @param {React.HTMLAttributes<HTMLTableSectionElement>} [props.rest]
  */
 const TableHeader = ({ className, ...rest }) => (
-  <thead
-    data-slot='table-header'
-    className={cn('[&_tr]:border-b', className)}
-    {...rest}
-  />
+  <thead data-slot='table-header' className={cn('[&_tr]:border-b', className)} {...rest} />
 );
 
 /**
@@ -36,11 +28,7 @@ const TableHeader = ({ className, ...rest }) => (
  * @param {React.HTMLAttributes<HTMLTableSectionElement>} [props.rest]
  */
 const TableBody = ({ className, ...rest }) => (
-  <tbody
-    data-slot='table-body'
-    className={cn('[&_tr:last-child]:border-0', className)}
-    {...rest}
-  />
+  <tbody data-slot='table-body' className={cn('[&_tr:last-child]:border-0', className)} {...rest} />
 );
 
 /**
@@ -51,10 +39,7 @@ const TableBody = ({ className, ...rest }) => (
 const TableFooter = ({ className, ...rest }) => (
   <tfoot
     data-slot='table-footer'
-    className={cn(
-      'border-t bg-muted/50 font-medium [&>tr]:last:border-b-0',
-      className
-    )}
+    className={cn('border-t bg-muted/50 font-medium [&>tr]:last:border-b-0', className)}
     {...rest}
   />
 );
@@ -120,13 +105,4 @@ const TableCaption = ({ className, ...rest }) => (
   />
 );
 
-export {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-};
+export { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow };

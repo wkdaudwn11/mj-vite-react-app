@@ -34,18 +34,10 @@ const HomePage = () => {
         <h2 className='text-xl font-bold'>1. 전역상태관리</h2>
         <div className='flex gap-4'>
           <p className='text-3xl font-bold text-blue-500 underline'>{count}</p>
-          <button
-            type='button'
-            className='cursor-pointer bg-gray-300 px-3'
-            onClick={setIncrease}
-          >
+          <button type='button' className='cursor-pointer bg-gray-300 px-3' onClick={setIncrease}>
             +
           </button>
-          <button
-            type='button'
-            className='cursor-pointer bg-gray-400 px-3'
-            onClick={setDecrease}
-          >
+          <button type='button' className='cursor-pointer bg-gray-400 px-3' onClick={setDecrease}>
             -
           </button>
           <button
@@ -60,9 +52,7 @@ const HomePage = () => {
 
       <div className='flex flex-col gap-1'>
         <h2 className='text-xl font-bold'>2. tailwindcss custom color</h2>
-        <span className='font-semibold text-custom-primary'>
-          text-custom-primary
-        </span>
+        <span className='font-semibold text-custom-primary'>text-custom-primary</span>
       </div>
 
       <div className='flex w-96 flex-col items-start gap-2'>
@@ -82,9 +72,7 @@ const HomePage = () => {
       </div>
 
       <div className='flex flex-col gap-1'>
-        <h2 className='text-xl font-bold'>
-          4. shadcn/ui - Table, Input, Dropdown
-        </h2>
+        <h2 className='text-xl font-bold'>4. shadcn/ui - Table, Input, Dropdown</h2>
         <div className='mx-auto w-full rounded-md border p-4'>
           <div className='flex items-center py-4'>
             <Input placeholder='Filter emails...' className='max-w-sm' />
@@ -128,9 +116,7 @@ const HomePage = () => {
           </Table>
 
           <div className='flex items-center justify-end space-x-2 py-4'>
-            <div className='flex-1 text-sm text-muted-foreground'>
-              0 of 0 row(s) selected.
-            </div>
+            <div className='flex-1 text-sm text-muted-foreground'>0 of 0 row(s) selected.</div>
             <div className='space-x-2'>
               <Button variant='outline' size='sm'>
                 Previous

@@ -7,9 +7,7 @@ import { cn } from '@/shared/lib';
 /**
  * @param {import('@radix-ui/react-dropdown-menu').DropdownMenuProps} props
  */
-const DropdownMenu = props => (
-  <DropdownMenuPrimitive.Root data-slot='dropdown-menu' {...props} />
-);
+const DropdownMenu = props => <DropdownMenuPrimitive.Root data-slot='dropdown-menu' {...props} />;
 
 /**
  * @param {import('@radix-ui/react-dropdown-menu').DropdownMenuPortalProps} props
@@ -59,12 +57,7 @@ const DropdownMenuGroup = props => (
  * @param {'default' | 'destructive'} [props.variant]
  * @param {import('@radix-ui/react-dropdown-menu').DropdownMenuItemProps} [props.rest]
  */
-const DropdownMenuItem = ({
-  className,
-  inset,
-  variant = 'default',
-  ...rest
-}) => (
+const DropdownMenuItem = ({ className, inset, variant = 'default', ...rest }) => (
   <DropdownMenuPrimitive.Item
     data-slot='dropdown-menu-item'
     data-inset={inset}
@@ -84,12 +77,7 @@ const DropdownMenuItem = ({
  * @param {boolean} [props.checked]
  * @param {import('@radix-ui/react-dropdown-menu').DropdownMenuCheckboxItemProps} [props.rest]
  */
-const DropdownMenuCheckboxItem = ({
-  className,
-  children,
-  checked,
-  ...rest
-}) => (
+const DropdownMenuCheckboxItem = ({ className, children, checked, ...rest }) => (
   <DropdownMenuPrimitive.CheckboxItem
     data-slot='dropdown-menu-checkbox-item'
     className={cn(
@@ -112,10 +100,7 @@ const DropdownMenuCheckboxItem = ({
  * @param {import('@radix-ui/react-dropdown-menu').DropdownMenuRadioGroupProps} props
  */
 const DropdownMenuRadioGroup = props => (
-  <DropdownMenuPrimitive.RadioGroup
-    data-slot='dropdown-menu-radio-group'
-    {...props}
-  />
+  <DropdownMenuPrimitive.RadioGroup data-slot='dropdown-menu-radio-group' {...props} />
 );
 
 /**
@@ -152,10 +137,7 @@ const DropdownMenuLabel = ({ className, inset, ...rest }) => (
   <DropdownMenuPrimitive.Label
     data-slot='dropdown-menu-label'
     data-inset={inset}
-    className={cn(
-      'px-2 py-1.5 text-sm font-medium data-[inset]:pl-8',
-      className
-    )}
+    className={cn('px-2 py-1.5 text-sm font-medium data-[inset]:pl-8', className)}
     {...rest}
   />
 );
@@ -181,10 +163,7 @@ const DropdownMenuSeparator = ({ className, ...rest }) => (
 const DropdownMenuShortcut = ({ className, ...rest }) => (
   <span
     data-slot='dropdown-menu-shortcut'
-    className={cn(
-      'ml-auto text-xs tracking-widest text-muted-foreground',
-      className
-    )}
+    className={cn('ml-auto text-xs tracking-widest text-muted-foreground', className)}
     {...rest}
   />
 );
