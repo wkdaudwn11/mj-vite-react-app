@@ -30,6 +30,8 @@ const HomePage = () => {
     <div className='flex flex-col gap-5 p-4'>
       <h1 className='text-3xl'>HomePage</h1>
 
+      <h2>VITE_APP_ENV: {import.meta.env.VITE_APP_ENV}</h2>
+
       <div className='flex flex-col gap-1'>
         <h2 className='text-xl font-bold'>1. zustand</h2>
         <div className='flex gap-4'>
