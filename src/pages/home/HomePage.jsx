@@ -31,22 +31,16 @@ const HomePage = () => {
       <h1 className='text-3xl'>HomePage</h1>
 
       <div className='flex flex-col gap-1'>
-        <h2 className='text-xl font-bold'>1. 전역상태관리</h2>
+        <h2 className='text-xl font-bold'>1. zustand</h2>
         <div className='flex gap-4'>
           <p className='text-3xl font-bold text-blue-500 underline'>{count}</p>
-          <button type='button' className='cursor-pointer bg-gray-300 px-3' onClick={setIncrease}>
-            +
-          </button>
-          <button type='button' className='cursor-pointer bg-gray-400 px-3' onClick={setDecrease}>
+          <Button onClick={setIncrease}>+</Button>
+          <Button variant='outline' onClick={setDecrease}>
             -
-          </button>
-          <button
-            type='button'
-            className='cursor-pointer bg-gray-500 px-3 text-gray-50'
-            onClick={reset}
-          >
+          </Button>
+          <Button variant='ghost' onClick={reset}>
             reset
-          </button>
+          </Button>
         </div>
       </div>
 
