@@ -2,7 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@api": ["./src/shared/api"],
+      "@model": ["./src/shared/model"],
+      "@lib": ["./src/shared/lib"],
+      "@assets": ["./src/shared/assets"],
+      "@store": ["./src/shared/store"],
+      "@hooks": ["./src/shared/hooks"],
+      "@ui": ["./src/shared/ui"]
     },
     "typeRoots": ["src/@types"]
   },

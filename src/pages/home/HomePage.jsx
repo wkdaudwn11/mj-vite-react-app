@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 
-import { useCountStore } from '@/shared/store';
+import { useCountStore } from '@store';
 import {
   Button,
   DropdownMenu,
@@ -15,9 +15,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/shared/ui';
+} from '@ui';
 
-const people = [
+const peopleList = [
   { id: 1, name: '홍길동', email: 'hong@example.com' },
   { id: 2, name: '김철수', email: 'kim@example.com' },
   { id: 3, name: '이영희', email: 'lee@example.com' },
@@ -108,7 +108,7 @@ const HomePage = () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {people.map(person => (
+              {peopleList.map(person => (
                 <TableRow key={person.id}>
                   <TableCell>{person.id}</TableCell>
                   <TableCell>{person.name}</TableCell>
